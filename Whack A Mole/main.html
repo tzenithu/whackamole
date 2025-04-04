@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack A Mole</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="molefavicon.png">
+
+
+</head>
+<body>
+    <div id="left-bar" class="side-bars"></div>
+    <div id="right-bar" class="side-bars"></div>
+    
+
+    <div id="main-menu">
+        <h1>Whack-a-Mole!</h1>
+        <button id = "start-button" onclick= readyGame()>Start Game</button>
+        <button id ="view-scores-button" onclick= userScores()>View Scores</button>
+        <h2>How to Play!</h1>
+            <p>Press the matching keys to Whack a Mole!</p>
+            <p>Try to rack up as many points as possible in the 60 second time limit!</p>
+    </div>
+    <div id="high-scores-menu">
+        <div id="high-scores" style="display: none;">
+            <h1>Your Top 3 Scores!</h1>
+            <ul id="high-score-list"></ul>
+            
+        </div>
+        <div id="returnButton" style="display: none;">
+        <button onclick=returnMain();>Return</button> 
+        </div>
+    </div>
+
+    
+
+    <div id = "countdown-display">
+        <h1 id = "countdown" style="display: none;">3</h1>
+    </div>
+
+    <div id="mole-game" style="display: none;">
+        <div id = "game-data">
+            <p id="score-display"> Score: 0</p>
+            <p id="game-timer">60</p>
+        </div>
+        <div id="mole-grid">
+
+            <div class="hole-container">
+                <div class="hole" id="hole1">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                </div>
+                <span class="key-label" id="key-q">Q</span>
+            </div>
+
+
+
+            <div class="hole-container">
+                <div class="hole" id="hole2">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                </div>
+                <span class="key-label" id="key-w">W</span>
+            </div>
+
+            <div class="hole-container">
+                <div class="hole" id="hole3">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                </div>
+                <span class="key-label" id="key-e">E</span>
+            </div>
+
+            <div class="hole-container">
+                <div class="hole" id="hole4">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                </div>
+                <span class="key-label" id="key-a">A</span>
+            </div>
+
+            <div class="hole-container">
+                <div class="hole" id="hole5">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                </div>
+                <span class="key-label" id = "key-s">S</span>
+            </div>
+            <div class="hole-container">
+                <div class="hole" id="hole6">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                    
+                </div>
+                <span class="key-label" id="key-d">D</span>
+            </div>
+           
+
+            <div class="hole-container">
+                <div class="hole" id="hole7">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                    
+                </div>
+                <span class="key-label" id="key-z">Z</span>
+            </div>
+
+            <div class="hole-container">
+                <div class="hole" id="hole8">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                  
+                </div>
+                <span class="key-label" id="key-x">X</span>
+            </div>
+
+            <div class="hole-container">
+                <div class="hole" id="hole9">
+                    <img src="mole.png" class="mole" alt="Mole"></img>
+                   
+                </div>
+                <span class="key-label" id="key-c">C</span>
+            </div>
+
+            
+        
+        </div>
+        <button id="exit-button" onclick="exit()">Exit to menu</button>
+    </div>
+    
+
+    <div id="results-screen" style="display: none;">
+        <p>Time has run out!</p>
+        <p id="final-score">Your final score was: </p>
+        <button onclick= readyGame();>Restart Game</button>
+        <button onclick=exit();>Main Menu</button>
+    </div>
+   
+
+    <script src="main.js"></script>
+</body>
+</html>
